@@ -1,0 +1,72 @@
+
+.layout {
+    color: #000000;
+    width: 40%;
+    aspect-ratio: 1 / 1;
+    margin: 0 auto;
+    cursor:pointer;
+    box-sizing: border-box;
+    display: grid;
+
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+    "E E . . ."
+    ". . . . ."
+    ". . C . ."
+    "D D D D D"
+    "A A . B B";
+    padding: 1em;
+}
+
+.button {
+    min-width: 50px;
+    font-family: inherit;
+    appearance: none;
+    border: 0;
+    border-radius: 5px;
+
+    padding: 8px 16px;
+    font-size: 2rem;
+    cursor: pointer;
+    box-shadow:
+            inset 2px 2px 3px rgba(255, 255, 255, 0.6),
+            inset -2px -2px 3px rgba(0, 0, 0, 0.6);
+}
+
+.button:active {
+    box-shadow:
+            inset -2px -2px 3px rgba(255, 255, 255, 0.6),
+            inset 2px 2px 3px rgba(0, 0, 0, 0.6);
+}
+
+.button_no:hover {
+    background: #3d7fe1;
+}
+
+.button_yes:hover {
+    background: #da6ab9;
+}
+
+.button_yes {
+    background: #ec82cd;
+    color: #fff;
+    grid-area: A;
+}
+
+.button_no {
+    background: #5992e8;
+    color: #fff;
+    grid-area: B;
+}
+
+.image {
+    grid-area: C;
+}
+
+.text {
+    font-family: inherit;
+    grid-area: D;
+    font-size: 2rem;
+    margin: 0 auto;
+}
