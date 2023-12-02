@@ -11,7 +11,7 @@ function main() {
     });
 
     function changeGrid() {
-        if (button_no.style.gridArea == "E / E / E / E") {
+        if (button_no.style.gridArea.includes("E")) {
             button_no.style.gridArea = "B";
         } else {
             button_no.style.gridArea = "E";
